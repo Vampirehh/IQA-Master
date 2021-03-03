@@ -52,8 +52,8 @@ addpath('./tools/IQA/SSEQ');
 
 %%
 %=================================<Parameters>=============================%
-restored_path = 'E:\DLMU\Desktop\评价指标\ancuti_2018\'; 
-dataset_name = '_ancuti2018'; 
+restored_path = ''; 
+dataset_name = ''; 
 str_name = '';
 file_name = dir(fullfile([restored_path,'*.png']));
 %=========================================================================%
@@ -74,7 +74,7 @@ sseq = zeros(1, length(file_name));
 
 
 %%
-%=========================================================================%
+%=============================<Evaluations>===============================%
 fid = fopen(['EVALUATION',dataset_name,str_name,'.csv'],'a');
 fprintf(fid,'%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s\n','Name','BRISQUE','CCF','CPBDM','FADE','JNBM',...
     'LPC','ILNIQE','NIQE','SSEQ','ROBUST');

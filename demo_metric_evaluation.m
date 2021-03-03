@@ -13,10 +13,10 @@ clear; close all; clc;
 addpath('./tools/Metrics');
 % original_path = './DING/original/';
 % restored_path = './DING/fusion/';
-original_path = 'E:\DLMU\WorkSpace\评价指标\data1\';
-restored_path = 'E:\DLMU\WorkSpace\评价指标\hazeline\OD_hazeline\';
+original_path = '';
+restored_path = '';
 dataset_name = '';
-str_name = '_hzaeline';
+str_name = '';
 file_name = dir(fullfile([original_path,'*.jpg']));%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Initialization

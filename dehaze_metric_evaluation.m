@@ -61,11 +61,11 @@ addpath('./tools/Dehaze/NR-FQA')
 
 %%
 %=================================<Parameters>=============================%
-original_path = '';
-restored_path = ''; 
-dataset_name = ''; 
-str_name = '';
-file_name = dir(fullfile([restored_path,'*.png']));
+original_path = 'E:\DLMU\数据集\Other\RTTS雾数据集\JPEGImages\';
+restored_path = 'E:\DLMU\WGX\LS\Image-Dehazing-and-Exposure-\RTTS_IDE_results\'; 
+dataset_name = '_RTTS_'; 
+str_name = 'IDE_';
+file_name = dir(fullfile([original_path,'*.png']));
 %=========================================================================%
 
 %%
@@ -81,7 +81,7 @@ niqe = zeros(1, length(file_name));
 robust = zeros(1, length(file_name));
 sseq = zeros(1, length(file_name));
 r = zeros(1,length(file_name));
-nr_fqa = zeros(1,length(file_namee));
+nr_fqa = zeros(1,length(file_name));
 %=========================================================================%
 
 
@@ -107,8 +107,8 @@ for num = 1 : length(file_name)
     im_ori_name = [original_path,file_name(num).name];
     tmp_out_name = [tmp_name(1:end-4),str_name,tmp_name(end-3:end)];
     %     im_rest_name = [restored_path,tmp_name(1:end-4),str_name,'.jpg'];%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    im_rest_name = [restored_path,tmp_name(1:end-4),str_name,tmp_name(end-3:end)];%%%%%%%%%%%%%%%%%%%%%%%%%
-    %     im_rest_name = [restored_path,str_name,tmp_name(1:end-4),tmp_name(end-3:end)];%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     im_rest_name = [restored_path,tmp_name(1:end-4),str_name,tmp_name(end-3:end)];%%%%%%%%%%%%%%%%%%%%%%%%%
+        im_rest_name = [restored_path,str_name,tmp_name(1:end-4),tmp_name(end-3:end)];%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
     
     Ori = imread(im_ori_name);
     A = imread(im_rest_name);       
@@ -138,7 +138,7 @@ for num = 1 : length(file_name)
     cd('../../../')
 
     cd('./tools/Dehaze/NR-FQA')
-    nr_fqa(num) = NR-FQA(A);
+    nr_fqa(num) = NR_FQA(A);
     cd('../../../')
     
     

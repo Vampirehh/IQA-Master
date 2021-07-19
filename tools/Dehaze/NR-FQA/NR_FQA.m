@@ -1,5 +1,5 @@
-function out = NR-FQA(img)
-addpath('utilities');
+function out = NR_FQA(img)
+
 
 %%  transfer images into grayscale
 I = im2double(rgb2gray(img));

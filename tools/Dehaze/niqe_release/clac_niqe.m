@@ -9,6 +9,6 @@ function quality = clac_niqe(A)
 im = A;
 
 quality = computequality(im,blocksizerow,blocksizecol,blockrowoverlap,blockcoloverlap, ...
-    mu_prisparam,cov_prisparam)
+    mu_prisparam,cov_prisparam);
 
 end

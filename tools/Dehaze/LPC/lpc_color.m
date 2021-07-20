@@ -35,5 +35,5 @@ w1=3.3;
 w2=1.3;
 
 w3=0.9;
-im_quality=(w1*si_intensity^2+w2*si_alpha^2+w3*si_betta^2)^0.5   
+im_quality=(w1*si_intensity^2+w2*si_alpha^2+w3*si_betta^2)^0.5;  
 end

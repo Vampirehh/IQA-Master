@@ -65,7 +65,7 @@ Crr=zeros(nl+2*S,nc+2*S);
 s=1;
 percentage=percentage/2;
 
-h = waitbar(0,'Please wait...');
+% h = waitbar(0,'Please wait...');
 
 %%% subwindow of size S*S
 for ii=1:round(S/2):nl
@@ -171,11 +171,11 @@ for ii=1:round(S/2):nl
                
     end
 
-    waitbar(ii/nl,h)
+%     waitbar(ii/nl,h)
 
 end
 
 Mask=Mask(S+1:nl+S,S+1:nc+S);
 Crr=Crr(S+1:nl+S,S+1:nc+S);
 
-close(h);
+% close(h);

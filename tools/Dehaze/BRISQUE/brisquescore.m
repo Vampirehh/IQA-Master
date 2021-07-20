@@ -9,7 +9,7 @@ imdist = double(imdist);
 
 if(nargin<2)
 feat = brisque_feature(imdist);
-disp('feat computed')
+% disp('feat computed')
 end
 
 

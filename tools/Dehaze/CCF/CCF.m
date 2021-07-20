@@ -39,7 +39,7 @@ function [quality] = CCF(im)
 % ------------calculate image quality with coefficients---------------------
 
     c=[0.17593 0.61759 0.33988 ];
-    quality = c(1)*(CCF_colorfulness) + c(2)*(CCF_contrast) + c(3)*(CCF_FADE)   
+    quality = c(1)*(CCF_colorfulness) + c(2)*(CCF_contrast) + c(3)*(CCF_FADE);   
       
 end
 

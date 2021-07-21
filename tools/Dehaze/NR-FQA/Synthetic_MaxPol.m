@@ -23,7 +23,11 @@ for n_ord = 1: numel(d)
     %  find sigma approximate
     threshold = .9;
     indx = cdf < threshold;
+    if sum(indx) ~= 0
     sigma_apprx = x(sum(indx))/max(x);
+    else
+    sigma_apprx = 0;
+    end
     %c = min(.45, 1 - min(.96, 8*sigma_apprx));
     c = (1-tanh(50*(sigma_apprx-.095)))/2*.41+.04;
     
